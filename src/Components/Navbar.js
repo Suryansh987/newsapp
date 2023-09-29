@@ -47,10 +47,10 @@ export default class Navbar extends Component {
                                 <Link className="nav-link" to="/Science">Science</Link>
                             </li>
                         </ul>
-                    </div>
                     <div className="form-check form-switch">
                         <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={this.props.toggleMode}/>
                             <label className="form-check-label" htmlFor="flexSwitchCheckDefault" style={{color:this.props.color}}>Dark Mode</label>
+                    </div>
                     </div>
                 </div>
             </nav>
