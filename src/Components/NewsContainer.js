@@ -4,6 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component"
 import Spinner from './Spinner'
 
 export default class NewsContainer extends Component {
+    apikey = process.env.REACT_APP_API_KEY;
     constructor() {
         super()
         this.state = {
@@ -19,7 +20,7 @@ export default class NewsContainer extends Component {
         let mm = date.getUTCMonth()
         let dd = date.getUTCDate()
         let yy = date.getUTCFullYear()
-        let url = `https://newsapi.org/v2/top-headlines?country=in&from=${yy}-${mm}-${dd}&category=${this.props.category}&pageSize=${this.state.pageSize}&page=${this.state.page}&apiKey=04ad27ce52184699a400bcd8f692b025`;
+        let url = `https://newsapi.org/v2/top-headlines?country=in&from=${yy}-${mm}-${dd}&category=${this.props.category}&pageSize=${this.state.pageSize}&page=${this.state.page}&apiKey=${this.apikey}`;
         fetch(url)
             .then(response => response.json()) // Return the JSON data here
             .then(data => {
@@ -39,7 +40,7 @@ export default class NewsContainer extends Component {
         let mm = date.getUTCMonth()
         let dd = date.getUTCDate()
         let yy = date.getUTCFullYear()
-        let url = `https://newsapi.org/v2/top-headlines?country=in&from=${yy}-${mm}-${dd}&category=${this.props.category}&pageSize=${this.state.pageSize}&page=${this.state.page}&apiKey=04ad27ce52184699a400bcd8f692b025`;
+        let url = `https://newsapi.org/v2/top-headlines?country=in&from=${yy}-${mm}-${dd}&category=${this.props.category}&pageSize=${this.state.pageSize}&page=${this.state.page}&apiKey=${this.apikey}`;
         fetch(url)
             .then(response => response.json()) // Return the JSON data here
             .then(data => {
